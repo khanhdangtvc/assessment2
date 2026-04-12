@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&display=swap');
+
+body{
+    background-color: #151515;
+    font-family:"Lexend";
+    color: #ffff;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+
+}
+.skills{
+    padding-left: 10px;
+}
+.links{
+    font-size: 16px;
+    border-radius: 20px;
+    padding:  5px 20px;
+    background-color: #202020;
+}
+.navbar-spacer{
+    padding-right: 10px;
+    min-width: 60px;
+}
+.links a:hover{
+    background-color: aliceblue;
+    color: black;
+    
+}
+.links a{
+    transition: background-color 0.2s ease;
+
+}
+
+.links a{
+    padding: 1rem;
+    border-radius: 20px;
+    color: #ffff;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.introduction{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+
+.portfolio-image{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.introduction{
+    padding: 0px 20px;
+}
