@@ -1,0 +1,334 @@
+
+/* ===== About & Contact page shared styles ===== */
+.page-content {
+  min-height: 100vh;
+  padding: 120px 40px 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.page-content h1 {
+  font-family: "Hedvig Letters Serif", serif;
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: lighter;
+  margin-bottom: 16px;
+  
+}
+
+.page-content h2 {
+  font-family: "Lexend", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 48px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* ===== About page specific ===== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.about-text p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 24px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 32px;
+}
+
+.skill-tag {
+  padding: 8px 20px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  background: rgba(207, 73, 129, 0.1);
+  border-color: rgba(207, 73, 129, 0.3);
+  color: #e8729e;
+  transform: translateY(-2px);
+}
+
+/* ===== Contact page specific ===== */
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  color: #fff;
+  font-family: "Lexend", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: rgba(207, 73, 129, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 20px rgba(207, 73, 129, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.submit-btn {
+  padding: 16px 40px;
+  background: linear-gradient(135deg, #CF4981, #a83268);
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  font-family: "Lexend", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  letter-spacing: 0.5px;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(207, 73, 129, 0.3);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* ===== About page stat cards ===== */
+.about-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: sticky;
+  top: 100px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, #CF4981, transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.stat-card:hover {
+  border-color: rgba(207, 73, 129, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateX(4px);
+}
+
+.stat-card:hover::before {
+  opacity: 1;
+}
+
+.stat-number {
+  font-family: "Hedvig Letters Serif", serif;
+  font-size: 36px;
+  font-weight: lighter;
+  background: linear-gradient(135deg, #fff, rgba(255, 255, 255, 0.6));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-label {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ===== Contact page social links ===== */
+.contact-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 48px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.contact-link-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 300;
+  transition: all 0.3s ease;
+}
+
+.contact-link-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.contact-link-item svg {
+  width: 20px;
+  height: 20px;
+  stroke: rgba(255, 255, 255, 0.5);
+  transition: stroke 0.3s ease;
+}
+
+.contact-link-item:hover svg {
+  stroke: #CF4981;
+}
+
+/* ===== Responsive for about/contact ===== */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-sidebar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: static;
+  }
+
+  .stat-card {
+    flex: 1;
+    min-width: 140px;
+  }
+
+  .contact-links {
+    flex-direction: column;
+  }
+
+  .page-content {
+    padding: 100px 20px 60px;
+  }
+}
+
+/* ===== Contact Button ===== */
+.contact-btn {
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  right: 40px;
+  top: 80%;
+  
+  transform: translateY(-50%);
+}
+
+.btn{
+  opacity: 0.5;
+  color: #fff;
+}
+
+/* ===== Submit Success Window ===== */
+.submit-success-window{
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  z-index: 10000;
+}
+.submit-success-window p{
+  color: hsla(135, 83%, 65%, 0.65);
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.submit-success-window button{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #CF4981;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+}
+
+
+.submit-success-window button:hover {
+  background-color: #e14c8b;
+  transform: scale(1.05);
+}
+
+.window-transition-enter {
+  animation: fadeIn 0.3s ease forwards;
+}
